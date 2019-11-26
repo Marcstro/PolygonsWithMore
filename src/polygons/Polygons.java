@@ -24,10 +24,7 @@ import java.util.Vector;
 import javax.swing.JFrame;
 import javax.swing.*;
 
-/**
- *
- * @author Satan
- */
+
 public class Polygons extends JFrame implements ActionListener{
 
     int amountOfPoints = 20;
@@ -245,7 +242,9 @@ public class Polygons extends JFrame implements ActionListener{
                 repaint();
             }
             else if (e.getSource()==skapaStreck){
+                skapaStreck.setText("Remove lines.");
                 if(rutnat.getLineAmount()==0){
+                skapaStreck.setText("New lines!");   
                 List<Line> l2 = new ArrayList();
                 List<Point> tagna = new ArrayList();
                 for(int x=0; x<amountOfPoints-1; x++){
